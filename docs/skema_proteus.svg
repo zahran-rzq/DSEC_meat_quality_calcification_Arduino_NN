@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1210" viewBox="0 0 1180 1210" font-family="Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c0392b"/></marker><marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="3" fill="#2c3e50"/></marker></defs>
+<text x="40" y="42" font-size="26" font-weight="bold" fill="#2c3e50">Skema Rangkaian Simulasi Proteus &#8212; Prediksi Kualitas Daging (E-Nose 11 Sensor MQ)</text>
+<text x="40" y="70" font-size="15" fill="#555">Panel A: 11 potensiometer (pengganti sensor MQ) ke pin analog A0&#8211;A10 &#160;&#8226;&#160; Panel B: LCD 20&#215;4 ke pin digital Arduino Mega 2560</text>
+<text x="40" y="108" font-size="18" font-weight="bold" fill="#1a5276">Panel A &#8212; 11 Potensiometer sebagai Pengganti Sensor MQ</text>
+<rect x="60" y="90" width="230" height="660" rx="10" fill="#eaf2f8" stroke="#2471a3" stroke-width="2.5"/>
+<text x="175.0" y="118" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a5276">ARDUINO</text>
+<text x="175.0" y="140" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a5276">MEGA 2560</text>
+<text x="175.0" y="162" font-size="12" text-anchor="middle" fill="#5d6d7e">ADC 10-bit (0&#8211;1023)</text>
+<line x1="520" y1="100" x2="520" y2="760" stroke="#c0392b" stroke-width="3"/>
+<line x1="560" y1="100" x2="560" y2="760" stroke="#17202a" stroke-width="3"/>
+<text x="520" y="90" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">+5 V</text>
+<text x="560" y="90" font-size="14" font-weight="bold" fill="#17202a" text-anchor="middle">GND</text>
+<line x1="290" y1="150" x2="334" y2="150" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="155" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A0</text>
+<line x1="334" y1="150" x2="396" y2="150" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="135.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="150" x2="417" y2="150" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="155" font-size="13" fill="#7e5109" font-weight="bold">MQ135</text>
+<line x1="446" y1="140" x2="520" y2="140" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="140" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="160" x2="560" y2="160" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="160" r="3.5" fill="#17202a"/>
+<line x1="290" y1="206" x2="334" y2="206" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="211" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A1</text>
+<line x1="334" y1="206" x2="396" y2="206" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="191.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="206" x2="417" y2="206" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="211" font-size="13" fill="#7e5109" font-weight="bold">MQ136</text>
+<line x1="446" y1="196" x2="520" y2="196" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="196" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="216" x2="560" y2="216" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="216" r="3.5" fill="#17202a"/>
+<line x1="290" y1="262" x2="334" y2="262" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="267" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A2</text>
+<line x1="334" y1="262" x2="396" y2="262" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="247.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="262" x2="417" y2="262" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="267" font-size="13" fill="#7e5109" font-weight="bold">MQ137</text>
+<line x1="446" y1="252" x2="520" y2="252" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="252" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="272" x2="560" y2="272" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="272" r="3.5" fill="#17202a"/>
+<line x1="290" y1="318" x2="334" y2="318" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="323" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A3</text>
+<line x1="334" y1="318" x2="396" y2="318" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="303.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="318" x2="417" y2="318" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="323" font-size="13" fill="#7e5109" font-weight="bold">MQ138</text>
+<line x1="446" y1="308" x2="520" y2="308" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="308" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="328" x2="560" y2="328" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="328" r="3.5" fill="#17202a"/>
+<line x1="290" y1="374" x2="334" y2="374" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="379" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A4</text>
+<line x1="334" y1="374" x2="396" y2="374" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="359.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="374" x2="417" y2="374" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="379" font-size="13" fill="#7e5109" font-weight="bold">MQ2</text>
+<line x1="446" y1="364" x2="520" y2="364" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="364" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="384" x2="560" y2="384" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="384" r="3.5" fill="#17202a"/>
+<line x1="290" y1="430" x2="334" y2="430" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="435" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A5</text>
+<line x1="334" y1="430" x2="396" y2="430" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="415.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="430" x2="417" y2="430" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="435" font-size="13" fill="#7e5109" font-weight="bold">MQ3</text>
+<line x1="446" y1="420" x2="520" y2="420" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="420" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="440" x2="560" y2="440" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="440" r="3.5" fill="#17202a"/>
+<line x1="290" y1="486" x2="334" y2="486" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="491" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A6</text>
+<line x1="334" y1="486" x2="396" y2="486" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="471.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="486" x2="417" y2="486" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="491" font-size="13" fill="#7e5109" font-weight="bold">MQ4</text>
+<line x1="446" y1="476" x2="520" y2="476" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="476" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="496" x2="560" y2="496" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="496" r="3.5" fill="#17202a"/>
+<line x1="290" y1="542" x2="334" y2="542" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="547" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A7</text>
+<line x1="334" y1="542" x2="396" y2="542" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="527.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="542" x2="417" y2="542" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="547" font-size="13" fill="#7e5109" font-weight="bold">MQ5</text>
+<line x1="446" y1="532" x2="520" y2="532" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="532" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="552" x2="560" y2="552" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="552" r="3.5" fill="#17202a"/>
+<line x1="290" y1="598" x2="334" y2="598" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="603" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A8</text>
+<line x1="334" y1="598" x2="396" y2="598" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="583.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="598" x2="417" y2="598" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="603" font-size="13" fill="#7e5109" font-weight="bold">MQ6</text>
+<line x1="446" y1="588" x2="520" y2="588" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="588" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="608" x2="560" y2="608" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="608" r="3.5" fill="#17202a"/>
+<line x1="290" y1="654" x2="334" y2="654" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="659" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A9</text>
+<line x1="334" y1="654" x2="396" y2="654" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="639.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="654" x2="417" y2="654" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="659" font-size="13" fill="#7e5109" font-weight="bold">MQ8</text>
+<line x1="446" y1="644" x2="520" y2="644" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="644" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="664" x2="560" y2="664" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="664" r="3.5" fill="#17202a"/>
+<line x1="290" y1="710" x2="334" y2="710" stroke="#2c3e50" stroke-width="2" marker-end="url(#dot)"/>
+<text x="280" y="715" font-size="14" text-anchor="end" fill="#1a5276" font-weight="bold">A10</text>
+<line x1="334" y1="710" x2="396" y2="710" stroke="#2c3e50" stroke-width="2"/>
+<rect x="420" y="695.0" width="26" height="30" rx="4" fill="#fdf2e9" stroke="#b9770e" stroke-width="2"/>
+<line x1="396" y1="710" x2="417" y2="710" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="454" y="715" font-size="13" fill="#7e5109" font-weight="bold">MQ9</text>
+<line x1="446" y1="700" x2="520" y2="700" stroke="#c0392b" stroke-width="2"/>
+<circle cx="520" cy="700" r="3.5" fill="#c0392b"/>
+<line x1="446" y1="720" x2="560" y2="720" stroke="#17202a" stroke-width="2"/>
+<circle cx="560" cy="720" r="3.5" fill="#17202a"/>
+<text x="60" y="790" font-size="13" fill="#555">Wiper (panah merah) = pin analog A0&#8211;A10. Nilai sensor = ADC &#215; 60/1023 &#160;(0 % = 0 V = 0,00 &#160;&#8226;&#160; 100 % = 5 V = 60,00)</text>
+<text x="40" y="830" font-size="18" font-weight="bold" fill="#1a5276">Panel B &#8212; LCD 20&#215;4 (mode 4-bit)</text>
+<rect x="60" y="854" width="300" height="150" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="2.5"/>
+<text x="210" y="884" font-size="15" font-weight="bold" text-anchor="middle" fill="#145a32">LCD 20&#215;4 (LM016L)</text>
+<rect x="80" y="896" width="260" height="21" fill="#0b3d1f"/>
+<text x="88" y="912" font-size="13" fill="#7dcea0" font-family="monospace">TVC= 5.42 logCFU/g</text>
+<rect x="80" y="921" width="260" height="21" fill="#0b3d1f"/>
+<text x="88" y="937" font-size="13" fill="#7dcea0" font-family="monospace">Kualitas: Spoiled</text>
+<rect x="80" y="946" width="260" height="21" fill="#0b3d1f"/>
+<text x="88" y="962" font-size="13" fill="#7dcea0" font-family="monospace">Softmax: Spoiled</text>
+<rect x="80" y="971" width="260" height="21" fill="#0b3d1f"/>
+<text x="88" y="987" font-size="13" fill="#7dcea0" font-family="monospace">0% 3% 12% 85%</text>
+<rect x="430" y="848" width="700" height="292" rx="8" fill="#f8f9f9" stroke="#7f8c8d" stroke-width="1.5"/>
+<text x="446" y="876" font-size="15" font-weight="bold" fill="#2c3e50">Sambungan LCD &#8594; Arduino (harus sama dengan kode)</text>
+<text x="446" y="896" font-size="13" font-family="monospace" fill="#444">LiquidCrystal lcd(12, 11, 5, 4, 3, 2);  // RS, E, D4, D5, D6, D7</text>
+<text x="460" y="922" font-size="13.5" font-family="monospace" fill="#1a5276">RS          </text>
+<text x="580" y="922" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  D12</text>
+<text x="460" y="946" font-size="13.5" font-family="monospace" fill="#1a5276">E (Enable)  </text>
+<text x="580" y="946" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  D11</text>
+<text x="460" y="970" font-size="13.5" font-family="monospace" fill="#1a5276">D4          </text>
+<text x="580" y="970" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  D5</text>
+<text x="460" y="994" font-size="13.5" font-family="monospace" fill="#1a5276">D5          </text>
+<text x="580" y="994" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  D4</text>
+<text x="460" y="1018" font-size="13.5" font-family="monospace" fill="#1a5276">D6          </text>
+<text x="580" y="1018" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  D3</text>
+<text x="460" y="1042" font-size="13.5" font-family="monospace" fill="#1a5276">D7          </text>
+<text x="580" y="1042" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  D2</text>
+<text x="460" y="1066" font-size="13.5" font-family="monospace" fill="#1a5276">RW          </text>
+<text x="580" y="1066" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  GND</text>
+<text x="460" y="1090" font-size="13.5" font-family="monospace" fill="#1a5276">VSS         </text>
+<text x="580" y="1090" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  GND</text>
+<text x="460" y="1114" font-size="13.5" font-family="monospace" fill="#1a5276">VDD         </text>
+<text x="580" y="1114" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  +5 V</text>
+<text x="460" y="1138" font-size="13.5" font-family="monospace" fill="#1a5276">V0          </text>
+<text x="580" y="1138" font-size="13.5" font-family="monospace" fill="#7d6608">&#8594;  kontras (potensiometer 10 k&#8486; ke GND)</text>
+<text x="40" y="1188" font-size="13" fill="#555">Catatan Proteus: clock MCU diset 16 MHz &#8226; potensiometer pada A0&#8211;A10 diset sesuai kolom *_POT_PCT di training/output/test_vectors.csv &#8226; LCD 20&#215;4 di Proteus dipilih varian 20 karakter 4 baris</text>
+</svg>
