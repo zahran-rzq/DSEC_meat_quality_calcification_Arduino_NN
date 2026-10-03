@@ -1,0 +1,14 @@
+# ---- artefak build pemeriksaan (dibangkitkan ulang oleh arduino/test/run_checks.sh)
+arduino/test/test_nn_core
+arduino/test/host_sim/host_sim
+
+# ---- Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# ---- editor / OS
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,367 @@
+{
+  "generated": "2026-10-03T13:47:39.868540",
+  "tf_version": "2.21.0",
+  "scaling": {
+    "type": "minmax_per_feature",
+    "target": [
+      -1,
+      1
+    ],
+    "X_MIN": [
+      7.940000057220459,
+      2.4200000762939453,
+      2.619999885559082,
+      7.670000076293945,
+      3.7899999618530273,
+      7.539999961853027,
+      2.2300000190734863,
+      4.190000057220459,
+      2.4000000953674316,
+      15.989999771118164,
+      7.159999847412109
+    ],
+    "X_MAX": [
+      22.139999389648438,
+      46.650001525878906,
+      28.959999084472656,
+      28.639999389648438,
+      20.1200008392334,
+      36.400001525878906,
+      36.27000045776367,
+      33.91999816894531,
+      41.04999923706055,
+      54.08000183105469,
+      19.299999237060547
+    ]
+  },
+  "arch": [
+    24,
+    12,
+    4
+  ],
+  "model_file": "BQCmodel_12cuts.keras",
+  "val_accuracy": 0.9847972989082336,
+  "test_accuracy": 0.9847972989082336,
+  "test_loss": 0.03730094060301781,
+  "report": "              precision    recall  f1-score   support\n\n   excellent     0.9942    0.9885    0.9914       697\n        good     0.9762    0.9808    0.9785       835\n  acceptable     0.9426    0.9410    0.9418       593\n     spoiled     0.9928    0.9931    0.9930      3203\n\n    accuracy                         0.9848      5328\n   macro avg     0.9764    0.9759    0.9762      5328\nweighted avg     0.9848    0.9848    0.9848      5328\n",
+  "confusion_matrix": [
+    [
+      689,
+      8,
+      0,
+      0
+    ],
+    [
+      4,
+      819,
+      12,
+      0
+    ],
+    [
+      0,
+      12,
+      558,
+      23
+    ],
+    [
+      0,
+      0,
+      22,
+      3181
+    ]
+  ],
+  "n_train": 21312,
+  "n_test": 5328,
+  "n_sheets": 12,
+  "n_rows": 26640,
+  "search": [
+    {
+      "arch": [
+        32,
+        16
+      ],
+      "val_accuracy": 0.9776651859283447
+    },
+    {
+      "arch": [
+        24,
+        12
+      ],
+      "val_accuracy": 0.9752252101898193
+    },
+    {
+      "arch": [
+        32
+      ],
+      "val_accuracy": 0.9748498201370239
+    },
+    {
+      "arch": [
+        24
+      ],
+      "val_accuracy": 0.9712837934494019
+    },
+    {
+      "arch": [
+        20
+      ],
+      "val_accuracy": 0.966966986656189
+    }
+  ],
+  "search_epochs": 120,
+  "search_generated": "2026-10-03T13:50:39.662677",
+  "arch_comparison_full_training": [
+    {
+      "arch": [
+        32,
+        16
+      ],
+      "test_accuracy": 0.9889264106750488,
+      "test_loss": 0.031725652515888214,
+      "macro_f1": 0.9824760521055467,
+      "val_accuracy_best": 0.9889264106750488,
+      "epochs_used": 279,
+      "n_params": 980,
+      "flash_kb": 3.83,
+      "train_seconds": 76.1
+    },
+    {
+      "arch": [
+        24,
+        12
+      ],
+      "test_accuracy": 0.9878003001213074,
+      "test_loss": 0.03375063091516495,
+      "macro_f1": 0.9807289013174034,
+      "val_accuracy_best": 0.9878003001213074,
+      "epochs_used": 295,
+      "n_params": 640,
+      "flash_kb": 2.5,
+      "train_seconds": 79.1
+    },
+    {
+      "arch": [
+        20
+      ],
+      "test_accuracy": 0.9791666865348816,
+      "test_loss": 0.05364811420440674,
+      "macro_f1": 0.967287116777,
+      "val_accuracy_best": 0.9791666865348816,
+      "epochs_used": 293,
+      "n_params": 324,
+      "flash_kb": 1.27,
+      "train_seconds": 81.6
+    }
+  ],
+  "arch_comparison_generated": "2026-10-03T13:54:42.787325",
+  "arch_comparison_runs": [
+    {
+      "generated": "run-A (log pelatihan)",
+      "results": [
+        {
+          "arch": [
+            24,
+            12
+          ],
+          "test_accuracy": 0.9868618845939636,
+          "test_loss": 0.033605899661779404,
+          "macro_f1": 0.9791229843739337,
+          "val_accuracy_best": 0.9868618845939636,
+          "epochs_used": 266,
+          "n_params": 640,
+          "flash_kb": 2.5,
+          "train_seconds": 77.3
+        },
+        {
+          "arch": [
+            32,
+            16
+          ],
+          "test_accuracy": 0.9853603839874268,
+          "test_loss": 0.039193153381347656,
+          "macro_f1": 0.9770070447640501,
+          "val_accuracy_best": 0.9853603839874268,
+          "epochs_used": 235,
+          "n_params": 980,
+          "flash_kb": 3.83,
+          "train_seconds": 65.7
+        },
+        {
+          "arch": [
+            20
+          ],
+          "test_accuracy": 0.977477490901947,
+          "test_loss": 0.05846898630261421,
+          "macro_f1": 0.9652612630335958,
+          "val_accuracy_best": 0.977477490901947,
+          "epochs_used": 291,
+          "n_params": 324,
+          "flash_kb": 1.27,
+          "train_seconds": 76.9
+        }
+      ]
+    },
+    {
+      "generated": "2026-10-03T13:54:42.787325",
+      "results": [
+        {
+          "arch": [
+            32,
+            16
+          ],
+          "test_accuracy": 0.9889264106750488,
+          "test_loss": 0.031725652515888214,
+          "macro_f1": 0.9824760521055467,
+          "val_accuracy_best": 0.9889264106750488,
+          "epochs_used": 279,
+          "n_params": 980,
+          "flash_kb": 3.83,
+          "train_seconds": 76.1
+        },
+        {
+          "arch": [
+            24,
+            12
+          ],
+          "test_accuracy": 0.9878003001213074,
+          "test_loss": 0.03375063091516495,
+          "macro_f1": 0.9807289013174034,
+          "val_accuracy_best": 0.9878003001213074,
+          "epochs_used": 295,
+          "n_params": 640,
+          "flash_kb": 2.5,
+          "train_seconds": 79.1
+        },
+        {
+          "arch": [
+            20
+          ],
+          "test_accuracy": 0.9791666865348816,
+          "test_loss": 0.05364811420440674,
+          "macro_f1": 0.967287116777,
+          "val_accuracy_best": 0.9791666865348816,
+          "epochs_used": 293,
+          "n_params": 324,
+          "flash_kb": 1.27,
+          "train_seconds": 81.6
+        }
+      ]
+    }
+  ],
+  "search_runs": [
+    {
+      "generated": "run-1 (log pelatihan)",
+      "epochs": 120,
+      "results": [
+        {
+          "arch": [
+            20
+          ],
+          "val_accuracy": 0.9692
+        },
+        {
+          "arch": [
+            24
+          ],
+          "val_accuracy": 0.9675
+        },
+        {
+          "arch": [
+            32
+          ],
+          "val_accuracy": 0.9649
+        },
+        {
+          "arch": [
+            24,
+            12
+          ],
+          "val_accuracy": 0.9782
+        },
+        {
+          "arch": [
+            32,
+            16
+          ],
+          "val_accuracy": 0.976
+        }
+      ]
+    },
+    {
+      "generated": "run-2",
+      "epochs": 120,
+      "results": [
+        {
+          "arch": [
+            20
+          ],
+          "val_accuracy": 0.9667792916297913
+        },
+        {
+          "arch": [
+            24
+          ],
+          "val_accuracy": 0.9724099040031433
+        },
+        {
+          "arch": [
+            32
+          ],
+          "val_accuracy": 0.9679054021835327
+        },
+        {
+          "arch": [
+            24,
+            12
+          ],
+          "val_accuracy": 0.9771021008491516
+        },
+        {
+          "arch": [
+            32,
+            16
+          ],
+          "val_accuracy": 0.9778528809547424
+        }
+      ]
+    },
+    {
+      "generated": "run-3",
+      "epochs": 120,
+      "results": [
+        {
+          "arch": [
+            20
+          ],
+          "val_accuracy": 0.967
+        },
+        {
+          "arch": [
+            24
+          ],
+          "val_accuracy": 0.9713
+        },
+        {
+          "arch": [
+            32
+          ],
+          "val_accuracy": 0.9748
+        },
+        {
+          "arch": [
+            24,
+            12
+          ],
+          "val_accuracy": 0.9752
+        },
+        {
+          "arch": [
+            32,
+            16
+          ],
+          "val_accuracy": 0.9777
+        }
+      ]
+    }
+  ]
+}
