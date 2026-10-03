@@ -70,8 +70,10 @@ Wiper = 100 % → 5 V → `analogRead` ≈ 1023 → nilai sensor ≈ 60,00
    Ini penyebab nomor 1 simulasi lambat/aneh di Proteus.
 3. Tambahkan 11 `POT-HG` pada pin A0–A10. Beri nama (`MQ135`, …) agar mudah diatur.
 4. Tambahkan LCD 20×4, rangkai sesuai tabel di atas.
-5. Tambahkan **Serial Monitor virtual** bila ingin melihat log: hubungkan COMPIM/atau
-   gunakan *Virtual Terminal* ke pin TXD0 (D1) — opsional.
+5. Tambahkan **Virtual Terminal** bila ingin melihat log. Hubungkan:
+   - `TXD0` Arduino Mega (pin digital 1) → `RXD` Virtual Terminal
+   - GND Arduino → GND Virtual Terminal
+   Atur Virtual Terminal ke **9600 baud, 8 data bit, no parity, 1 stop bit (8N1)**.
 
 ---
 
@@ -177,7 +179,7 @@ Bila baris 1 dan baris 2 berbeda, artinya kedua cabang output "tidak sepakat" �
 biasanya karena TVC hasil regresi berada sangat dekat dengan ambang 3,0 / 4,0 / 5,0.
 Ini justru bahan analisis yang bagus untuk laporan.
 
-Serial Monitor (115200 baud) menampilkan detail: nilai tiap sensor, hasil normalisasi,
+Virtual Terminal pada TX0 (9600 baud) menampilkan detail: nilai tiap sensor, hasil normalisasi,
 probabilitas softmax, estimasi TVC, dan keputusan akhir.
 
 ---

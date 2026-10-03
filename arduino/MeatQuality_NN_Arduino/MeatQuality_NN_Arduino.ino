@@ -21,7 +21,7 @@
  *      5. kelas   : o = softmax( W2 . h + b2 )                (matriks 4x20)
  *      6. TVC     : t = W2t . h + b2t  (linear, 1x20) lalu di-denormalisasi
  *      7. threshold: TVC<3 Excellent, 3-4 Good, 4-5 Acceptable, >=5 Spoiled
- *      8. tampilkan ke LCD 20x4 + Serial Monitor
+ *      8. tampilkan ke LCD 20x4 + Serial Monitor (TX0 pin 1)
  *
  *  PENGUJIAN DI PROTEUS:
  *      - INPUT_MODE 0 : baca 11 potensiometer pada pin A0..A10
@@ -33,7 +33,7 @@
  *      RS -> D12, E -> D11, D4 -> D5, D5 -> D4, D6 -> D3, D7 -> D2
  *      RW -> GND, VSS -> GND, VDD -> +5V, V0 -> potensiometer kontras
  *
- *  Penulis sketch  : (isi nama Anda) - dari template RP Ganjil
+ *
  *  Sumber parameter: model_params.h (hasil ekspor otomatis dari Python)
  * ==========================================================================*/
 
@@ -45,7 +45,7 @@
  * -------------------------------------------------------------------------*/
 #define INPUT_MODE        0      // 0 = potensiometer (Proteus), 1 = TEST_VECTOR
 #define USE_BOTH_MODELS   1      // 1 = tampilkan kelas DAN estimasi TVC
-#define SERIAL_BAUD       115200
+#define SERIAL_BAUD       9600
 #define SENSOR_SETTLE_MS  300    // jeda setelah ganti mode
 
 /* LCD: RS, E, D4, D5, D6, D7 */
@@ -223,19 +223,41 @@ void setup() {
   Serial.print(F(" Mode input: "));
   Serial.println(INPUT_MODE == 1 ? F("TEST_VECTOR (data uji)") : F("POTENSIOMETER"));
   Serial.println(F("=========================================="));
-  delay(1500);
+  delay(500);
   lcd.clear();
+}
+
+void showProgress(byte percent, const __FlashStringHelper *step) {
+  int filled = percent / 10;
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(F("Menghitung NN..."));
+  lcd.setCursor(0, 1);
+  lcd.print(step);
+  lcd.setCursor(0, 2);
+  lcd.print('[');
+  for (int i = 0; i < 10; i++) {
+    lcd.print(i < filled ? '#' : '-');
+  }
+  lcd.print(']');
+  lcd.setCursor(0, 3);
+  lcd.print(percent);
+  lcd.print(F("%"));
 }
 
 void loop() {
   /* --- (a) baca 11 input & normalisasi --- */
+  showProgress(10, F("Membaca sensor"));
   readSensors();
 
   /* --- (b) hidden layer (berbagi input yang sama untuk dua model) --- */
+  showProgress(45, F("Hidden layer"));
   forwardHidden(x_norm, NN_N_INPUT, CLS_W1, CLS_B1, NN_N_HIDDEN_CLS, hidden_cls);
   forwardHidden(x_norm, NN_N_INPUT, TVC_W1, TVC_B1, NN_N_HIDDEN_TVC, hidden_tvc);
 
   /* --- (c) output layer --- */
+  showProgress(75, F("Output softmax/TVC"));
   forwardOutputClass(hidden_cls, NN_N_HIDDEN_CLS, CLS_W2, CLS_B2, NN_N_CLASS, prob_cls);
 
   float tvc_norm = forwardOutputTVC(hidden_tvc, NN_N_HIDDEN_TVC, TVC_W2, TVC_B2);
@@ -244,6 +266,7 @@ void loop() {
               * (TVC_MAX_LOG - TVC_MIN_LOG) + TVC_MIN_LOG;
 
   /* --- (d) logika output --- */
+  showProgress(90, F("Menentukan kualitas"));
   pred_class = qualityFromSoftmax(prob_cls);            // dari model klasifikasi
   int class_by_tvc = qualityFromTVC(tvc_value);         // dari model regresi
 
@@ -273,7 +296,7 @@ void loop() {
   }
   lcd.print("   ");
 
-  /* --- (f) kirim detail ke Serial Monitor --- */
+  /* --- (f) kirim detail ke Serial Monitor (TX0 pin 1) --- */
   if (millis() - last_print > 1000) {          // tiap 1 detik
     last_print = millis();
     Serial.println(F("------------------------------------------"));
