@@ -1,0 +1,8 @@
+# Library untuk menjalankan program training (python training/train_meat_quality.py)
+# Install:  pip install -r requirements.txt
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+tensorflow>=2.13
+openpyxl>=3.1        # membaca file .xlsx
+matplotlib>=3.7      # grafik kurva training (opsional)

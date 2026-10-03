@@ -1,0 +1,20 @@
+# ---- artefak build / sementara ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+verification/build/
+*.o
+*.exe
+
+# ---- hasil training ----
+# Dataset gabungan adalah turunan dari file .xlsx (2,5 MB) -> tidak perlu di-commit.
+# File hasil lain (model_params.h, test_vectors.csv, laporan .md) TETAP di-commit
+# karena dibutuhkan untuk laporan dan simulasi Proteus.
+training/output/merged_dataset.csv
+training/output/train_log.txt
+
+# ---- berkas Proteus / Arduino IDE ----
+*.pdsbak
+*.pdsprj.lock
+*.hex
+*.elf
